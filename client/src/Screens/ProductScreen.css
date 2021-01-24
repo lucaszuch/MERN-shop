@@ -1,0 +1,114 @@
+.back-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  width: 15rem;
+  height: 5rem;
+  padding: 1rem;
+}
+
+.back-result-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #353b48;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.back-result-btn:hover {
+  background-color: #535c68;
+  cursor: pointer;
+}
+
+.back-result-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.productScreen-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.productScreen-image img {
+  width: 20rem;
+  height: 14rem;
+  margin-bottom: 1rem;
+}
+
+.productScreen-brand {
+  font-style: italic;
+}
+
+.productScreen-description {
+  text-align: justify;
+}
+
+.basket-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.basket-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #353b48;
+  border-radius: 1rem;
+
+}
+
+.basket-quantity {
+  font-size: 1.25rem;
+}
+
+.basket-quantity label {
+  padding-right: 1rem;
+}
+
+.btn-basket {
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #353b48;
+  margin: 1rem;
+  width: 15rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn-basket:hover {
+  color: #fff;
+  background-color: #535c68;
+}
+
+.btn-outStock {
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #666;
+  margin: 1rem;
+  width: 15rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+}

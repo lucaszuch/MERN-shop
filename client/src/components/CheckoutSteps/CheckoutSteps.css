@@ -1,0 +1,17 @@
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 1rem auto;
+}
+
+.checkout-steps > div {
+  border-bottom: .30rem #666 solid;
+  color: gray;
+  flex: 1 1;
+}
+
+.checkout-steps > div.active {
+  border-bottom: .30rem blue solid;
+  color: red
+}
