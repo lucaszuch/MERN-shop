@@ -1,0 +1,30 @@
+.back-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  width: 12rem;
+  height: 5rem;
+  padding: 1rem;
+}
+
+.back-result-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #353b48;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.back-result-btn:hover {
+  background-color: #535c68;
+  cursor: pointer;
+}
+
+.back-result-btn a {
+  text-decoration: none;
+  color: #fff;
+}

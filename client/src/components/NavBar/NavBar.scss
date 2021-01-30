@@ -31,6 +31,10 @@ header {
   font-size: 2rem;
 }
 
+.shop-name, .shop-nav {
+  display: none;
+}
+
 .left-bar {
   display: flex;
   justify-content: space-between;
@@ -51,8 +55,27 @@ header {
   }
 
   a:hover {
+    color: #0097e6;
+    transition: all 0.5s ease;
+  }
+}
+
+.btn-logoff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 4rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  
+  i {
     color: #fff;
-    background-color: #535c68;
+    text-decoration: none;
+  }
+
+  i:hover {
+    color: #0097e6;
     transition: all 0.5s ease;
   }
 }
@@ -71,8 +94,7 @@ header {
   }
 
   a:hover {
-    color: #fff;
-    background-color: #535c68;
+    color: #0097e6;
     transition: all 0.5s ease;
   }
 }
@@ -132,4 +154,58 @@ header {
 .close-nav:hover{
   background-color: #535c68;
   transition: all 0.5s ease;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Desktop, big screens */
+@media (min-width: 992px) {
+  .btn-menu {
+    display: none;
+  }
+
+  .shop-name {
+    display: flex;
+    padding: 0;
+  }
+
+  .shop-nav {
+    display: flex;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: auto;
+      margin: 0 auto;
+      padding: 0;
+      width: 20rem;
+      font-size: 1.25rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    a:hover {
+      color: #0097e6;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Tablets landscape (up to 1024px) */
+@media only screen and (min-width: 1024px) and (orientation:landscape) {
+  .shop-nav, .shop-name {
+    display: flex;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Desktop, big screens */
+@media (min-width: 1200px) {
+  .shop-nav, .shop-name {
+    display: flex;
+  }
 }

@@ -23,7 +23,7 @@ const NavBar = (props) => {
 
   const handleLogout = () => {
     dispatch(logout());
-    props.history.push('/signin');
+    props.history.push('/');
   }
 
   //Rendering content
@@ -34,17 +34,25 @@ const NavBar = (props) => {
              onClick={openMenu}>
           <i className="fa fa-bars"></i>
         </div>
+        <div className="shop-name">
+          <h3>AL DEE'S</h3>
+        </div>
+        <nav className="shop-nav">
+          <ul>
+            <Link to={`/`}><li>SHOP</li></Link>
+            <Link to={`/about`}><li>ABOUT</li></Link>
+            <Link to={`/Contact`}><li>CONTACT</li></Link>
+          </ul>
+        </nav>
         <div className="left-bar">
           <div className="btn-cart">
               <Link to={`cart`}>CART</Link>
           </div>
           {/* Check user loggedin */}
           {
-            userInfo ? <div className="btn-logoff">
-                          <button type="button"
-                                  onClick={handleLogout}>
-                            {userInfo.name} <i class="fa fa-times"></i>
-                          </button>
+            userInfo ? <div className="btn-logoff"
+                            onClick={handleLogout}>
+                              {(userInfo.name).toUpperCase()}&nbsp;<i class="fa fa-times"></i>
                         </div> :
             <div className="btn-profile">
             <Link to='/signin'>LOGIN</Link>
@@ -54,9 +62,9 @@ const NavBar = (props) => {
       </div>
       <div className="nav-list">
         <ul>
-          <Link to={`/`}><li>Shop</li></Link>
-          <Link to={`/about`}><li>About</li></Link>
-          <Link to={`/Contact`}><li>Contact</li></Link>
+          <Link to={`/`}><li>SHOP</li></Link>
+          <Link to={`/about`}><li>ABOUT</li></Link>
+          <Link to={`/Contact`}><li>CONTACT</li></Link>
         </ul>
         <div className="close-nav"
              onClick={openMenu}>

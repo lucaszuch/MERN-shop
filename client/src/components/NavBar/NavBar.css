@@ -46,6 +46,10 @@ header {
   font-size: 2rem;
 }
 
+.shop-name, .shop-nav {
+  display: none;
+}
+
 .left-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,8 +81,34 @@ header {
 }
 
 .btn-cart a:hover {
+  color: #0097e6;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn-logoff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6rem;
+  height: 4rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.btn-logoff i {
   color: #fff;
-  background-color: #535c68;
+  text-decoration: none;
+}
+
+.btn-logoff i:hover {
+  color: #0097e6;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -104,8 +134,7 @@ header {
 }
 
 .btn-profile a:hover {
-  color: #fff;
-  background-color: #535c68;
+  color: #0097e6;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -178,5 +207,67 @@ header {
   background-color: #535c68;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Desktop, big screens */
+@media (min-width: 992px) {
+  .btn-menu {
+    display: none;
+  }
+  .shop-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .shop-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .shop-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    width: 20rem;
+    font-size: 1.25rem;
+  }
+  .shop-nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .shop-nav a:hover {
+    color: #0097e6;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Tablets landscape (up to 1024px) */
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .shop-nav, .shop-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Desktop, big screens */
+@media (min-width: 1200px) {
+  .shop-nav, .shop-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=NavBar.css.map */

@@ -1,0 +1,140 @@
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.register-title {
+  display: flex;
+  padding: 1rem;
+}
+
+.registerForm-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 2rem 1rem 2rem;
+  border: solid 1px #353b48;
+  border-radius: 1rem;
+}
+
+.registerForm-name ,.registerForm-email, .registerForm-password, .registerForm-repassword {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.registerForm-name, .registerForm-email label, .registerForm-password, .registerForm-repassword label {
+margin-bottom: 0.25rem;
+}
+
+.btn-registerForm {
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #353b48;
+  margin: 1rem;
+  width: 15rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn-registerForm:hover {
+  color: #fff;
+  background-color: #535c68;
+}
+
+.registerForm-newUserText, .registerForm-newUserLink {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerForm-newUserLink {
+  margin: 0 auto;
+  background-color: #353b48;
+  width: 15rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.registerForm-newUserLink:hover {
+  background-color: #535c68;
+  cursor: pointer;
+}
+
+.registerForm-newUserLink a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Mobiles landscape */
+@media (min-width: 576px) {
+  .register-wrapper {
+    height: 200vh;
+  }
+
+  .registerForm-wrapper form {
+    width: 70%;
+  }
+
+  .registerForm-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Tablets */
+@media (min-width: 728px) {
+  .register-wrapper {
+    height: auto;
+  }
+
+  .registerForm-wrapper {
+    width: 60%;
+  }
+
+  .registerForm-wrapper form {
+    width: 90%;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Medium Screens */
+@media (min-width: 992px) {
+  .registerForm-wrapper {
+    width: 55%;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Tablets landscape (up to 1024px) */
+@media only screen and (min-width: 1024px) and (orientation:landscape) {
+  .registerForm-wrapper {
+    width: 50%;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Desktop, big screens */
+@media (min-width: 1200px) {
+  .userForm-wrapper {
+    width: 40%;
+  }
+}
+
+

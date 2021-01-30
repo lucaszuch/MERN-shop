@@ -2,9 +2,6 @@ import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 
-//Provisional image
-import backpack from '../components/Images/backpack.JPG';
-
 //importing external files
 import './ShopScreen.css';
 import {listProducts} from '../actions/productActions';
@@ -24,15 +21,18 @@ function ShopScreen(props) {
          error ? <div>{error}</div> :
 
     <main>
-      <div className="results-bar">
-        
+      <div className="banner-products">
+        {/* Add banner */}
       </div>
+      <div className="shop-title">
+          <h3>SHOP</h3>
+        </div>
       <div className="product-wrapper">          
         {
           products.map(product => 
             <div className="product-box">
               <div className="product-img">
-                <img src={backpack} alt={product.name} />
+                <img src={product.image} alt={product.name} />
               </div>
               <div className="product-info">
                 <div className="product-name">
@@ -43,9 +43,6 @@ function ShopScreen(props) {
                 </div>
                 <div className="product-price">
                   <h5>${product.price}</h5>
-                </div>
-                <div className="product-rating">
-                  <h6>{product.rating} Stars ({product.numReviews})</h6>
                 </div>
               </div>
             </div>

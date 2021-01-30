@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { saveShipping } from '../actions/cartActions';
 
 //Importing external files
-import './RegisterScreen.css';
+import './ShippingScreen.css';
 import CheckoutSteps from '../components/CheckoutSteps/CheckoutSteps';
 
 function ShippingScreen(props) {
@@ -24,52 +24,52 @@ function ShippingScreen(props) {
   }
   return (
     <main>
-      <div>
-        <CheckoutSteps step1 step2></CheckoutSteps>
-      </div>
-    <div className="shipping-wrapper">
-      <div className="shipping-title">
-          <h1>SHIPPING</h1>
-      </div>
       <div className="shipping-wrapper">
-        <form onSubmit={handleSubmit}>
-        <div className="shipping-address">
-            <label htmlFor="address">Name</label>
-            <input type="text"
-                   name="address"
-                   id="address"
-                   onChange={(e) => setAddress(e.target.value)}
-                   >
-            </input>
-          </div>
-          <div className="shipping-city">
-            <label htmlFor="city">Email</label>
-            <input type="text"
-                  name="city"
-                  id="city"
-                  onChange={(e) => setCity(e.target.value)}
-                  >
-            </input>
-          </div>
-          <div className="shipping-postcode">
-          <label htmlFor="postcode">Password</label>
-            <input type="text"
-                  name="postcode"
-                  id="postcode"
-                  onChange={(e) => setPostcode(e.target.value)}
-                  >
-            </input>
-          </div>
-          <div className="shipping-btn">
-            <button type="submit"
-                    className="btn-signin">
-                      NEXT
-            </button>
-          </div>
-        </form>
+        <div>
+          <CheckoutSteps step1 step2></CheckoutSteps>
+        </div>
+        <div className="shipping-title">
+            <h1>SHIPPING</h1>
+        </div>
+        <div className="shippingForm-wrapper">
+          <form onSubmit={handleSubmit}>
+          <div className="shippingForm-address">
+              <label htmlFor="address">Address</label>
+              <input type="text"
+                    name="address"
+                    id="address"
+                    onChange={(e) => setAddress(e.target.value)}
+                    >
+              </input>
+            </div>
+            <div className="shippingForm-city">
+              <label htmlFor="city">City</label>
+              <input type="text"
+                    name="city"
+                    id="city"
+                    onChange={(e) => setCity(e.target.value)}
+                    >
+              </input>
+            </div>
+            <div className="shippingForm-postcode">
+            <label htmlFor="postcode">Postcode</label>
+              <input type="text"
+                    name="postcode"
+                    id="postcode"
+                    onChange={(e) => setPostcode(e.target.value)}
+                    >
+              </input>
+            </div>
+            <div className="btn-shippingForm">
+              <button type="submit"
+                      className="btn-signin">
+                        NEXT
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
   )
 }
 export default ShippingScreen;

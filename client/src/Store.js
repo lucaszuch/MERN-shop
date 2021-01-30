@@ -11,7 +11,7 @@ const userInfo = Cookie.getJSON('userInfo') || null;
 
 const initialState = {
   cart: {cartItems, shipping: {}, payment: {}},
-  userSignin: {userInfo},
+  userSignin: {userInfo}
 };
 
 const reducer = combineReducers({

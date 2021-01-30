@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 //Importing
-import './CartScreen.css';
+import './PlaceOrderScreen.css';
 import CheckoutSteps from '../components/CheckoutSteps/CheckoutSteps';
 import backpack from '../components/Images/backpack.JPG';
 
@@ -22,13 +22,13 @@ function PlaceOrderScreen(props) {
   //Order details
   const orderPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const shippingPrice = orderPrice > 50 ? 0 : 10;
-  const TaxPrice = orderPrice * .20; //considering VAT
+  const TaxPrice = parseInt((orderPrice * .20).toFixed(2)); //considering VAT
   const totalPrice = orderPrice + shippingPrice + TaxPrice;
   
   //Handlers
   const handlePlaceOrder = (e) => {
     e.preventDefault();
-    props.history.push('/sucess')
+    props.history.push('/success')
   }
 
   //Rendering
@@ -38,25 +38,20 @@ function PlaceOrderScreen(props) {
         <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       </div>
       <div className="placeOrder-wrapper">
-        <div className="placeOrder-title">
-          <h1>BASKET</h1>
-        </div>
         <div className="placeOrder-info-wrapper">
           <div className="placeOrder-infoShipping">
             <h3>Shipping</h3>
             <div>
-              {cart.shipping.address}
-              {cart.shipping.city}
-              {cart.shipping.postcode}
+              <p>Delivery Address: {cart.shipping.address}, {cart.shipping.city}</p>
+              <p>Postcode: {cart.shipping.postcode}</p>
             </div>
           </div>
           <div className="placeOrder-infoPayment">
             <h3>Payment</h3>
             <div>
-              Payment method: {cart.payment.paymentMehod}
+              Payment method: {cart.payment.paymentMethod}
             </div>
           </div>
-        </div>
         
         {
           cartItems.length === 0 ?
@@ -65,33 +60,30 @@ function PlaceOrderScreen(props) {
           </div>
           :
           cartItems.map(item => 
-              <div className="itemList-wrapper">
-                <div className="itemList-box">
-                  <div className="itemList-details">
-                    <div className="itemList-img">
+              <div className="placeOrder-item-wrapper">
+                <div className="placeOrder-box">
+                  <div className="placeOrder-details">
+                    <div className="placeOrder-img">
                       <img src={backpack} alt="please, replace"/>
                     </div>
-                    <div className="itemList-info">
+                    <div className="placeOrder-info">
                       <Link to={`/product/${item.product}`}>
                         {item.name}
                       </Link>                    
-                      <div className="itemList-qty">
-                        <div className="itemList-qty-labels">
-                          Qty: {item.qty};
-                        </div>
+                      <div className="placeOrder-info-qty">
+                        <p>Quantity: {item.qty}</p>
+                        <p>Price: ${item.price}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="itemList-price">
-                    <h3>Price: ${item.price}</h3>
-                  </div>
               </div>
-            </div>         
+            </div>        
           )
         } 
+        </div>
         <div className="summary-wrapper">
           <div className="summary-title">
-            <h2>Summaty</h2>
+            <h2>Summary</h2>
           </div>
           <div className="summary-info">
             <h3>Items Price: ${orderPrice}</h3>

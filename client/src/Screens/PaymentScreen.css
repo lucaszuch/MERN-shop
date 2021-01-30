@@ -1,38 +1,72 @@
-.checkout-steps {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem;
-  margin: 0 auto;
-}
-
-.checkout-steps > div {
-  border-bottom: .2rem #666 solid;
-  color: #666;
-  flex: 1 1;
+.payment-wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 0.25rem;
+  flex-direction: column;
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
-.checkout-steps > div.active {
+.payment-title {
+  display: flex;
+  padding: 1rem;
+}
+
+.paymentForm-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 95%;
   margin: 0 auto;
-  border-bottom: .2rem #0097e6 solid;
-  color: #0097e6
+  font-size: 1.25rem;
+}
+
+.paymentForm-title {
+  margin-bottom: 1rem;
+}
+
+.paymentForm-wrapper form {
+  border: 1px solid #353b48;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.paymentForm-paypal, .paymentForm-btn {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.paymentForm-paypal {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.shippingForm-wrapper label {
+  margin-bottom: 0.1rem;
 }
 
 /*-------------------------------------------------------------------------------------*/
-/* Mobiles landscape */
+/* Mobiles landscaper */
 @media (min-width: 576px) {
-  .checkout-steps {
-    width: 80%;
+  .paymentForm-wrapper {
+    width: 70%;
+  }
+
+  .paymentForm-wrapper form {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
 /*-------------------------------------------------------------------------------------*/
 /* Tablets */
 @media (min-width: 728px) {
-  .checkout-steps {
+  .paymentForm-wrapper {
     width: 70%;
   }
 }
@@ -40,23 +74,14 @@
 /*-------------------------------------------------------------------------------------*/
 /* Medium Screens */
 @media (min-width: 992px) {
-  .checkout-steps {
-    width: 60%;
-  }
 }
 
 /*-------------------------------------------------------------------------------------*/
 /* Tablets landscape (up to 1024px) */
 @media only screen and (min-width: 1024px) and (orientation:landscape) {
-  .checkout-steps {
-    width: 65%;
-  }
 }
 
 /*-------------------------------------------------------------------------------------*/
 /* Desktop, big screens */
 @media (min-width: 1200px) {
-  .checkout-steps {
-    width: 50%;
-  }
 }

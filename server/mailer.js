@@ -12,7 +12,7 @@ const auth = {
 //Mailing setup
 const transporter = nodemailer.createTransport(mailGun(auth));
 
-const sendMail = (email, subject, text, callback) => {
+const sendMail = (email, subject, text) => {
   const mailOptions = {
     from: email,
     to: 'lucaszuch@outlook.com',
@@ -20,14 +20,15 @@ const sendMail = (email, subject, text, callback) => {
     text: text
   };
   
-  transporter.sendMail(mailOptions, function(error, contactData) {
-    if (error) {
-      callback(error, null);
-      console.log('Ops! I did it again!!');
-    } else {
-      callback(null, contactData);
-      console.log('Message sent!')
-    }
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, function(error, contactData) {
+      if(error) {
+        console.log('Ops! I did it again!');
+        reject(error);
+      }
+      console.log('Email sent!');
+      resolve(contactData);
+      });
   });
 };
 

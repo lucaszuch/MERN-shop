@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 
 //Importing
 import './CartScreen.css';
+import ReturnToShop from '../components/ReturnToShop/ReturnToShop';
 import backpack from '../components/Images/backpack.JPG';
 
 function CartScreen(props) {
@@ -32,10 +33,12 @@ function CartScreen(props) {
 
   return (
     <main>
-      <div className="cart-wrapper">
-        <div className="cart-title">
+       <ReturnToShop />
+      <div className="cart-title">
           <h1>BASKET</h1>
         </div>
+      <div className="cart-wrapper">
+        <div className="cart-items-wrapper">
         {
           cartItems.length === 0 ?
           <div className="empty-cart">
@@ -77,9 +80,11 @@ function CartScreen(props) {
                     <h3>Price: ${item.price}</h3>
                   </div>
               </div>
-            </div>         
+            </div>
+                  
           )
-        } 
+        }
+        </div>
         <div className="checkout-wrapper">
           <div className="checkout-title">
             <h2>Subtotal</h2>

@@ -7,7 +7,7 @@ import './AboutScreen.css';
 function AboutScreen() {
   return (
     <main>
-      <div className="banner">
+      <div className="about-banner">
         {/* Add banner */}
       </div>
       <div className="about-box">
@@ -23,7 +23,6 @@ function AboutScreen() {
               Adipisci aliquam esse, laborum quia veritatis alias et at a, sunt officiis voluptatem
               labore consequatur perspiciatis suscipit repudiandae voluptates consectetur dicta pariatur.
               </p>
-              <a href="https://tibia.fandom.com/wiki/Al_Dee">Check my Wiki!</a>
             </div>
           </div>
         </div>

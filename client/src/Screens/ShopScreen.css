@@ -1,10 +1,11 @@
-.results-bar {
+.banner-products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 4rem;
-  background-color: #666;
+  height: 15rem;
+  background-image: url("../components/Images/compass.jpg");
+  background-size: cover;
 }
 
 .product-wrapper {
@@ -20,8 +21,19 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
+}
+
+.shop-title {
+  display: flex;
+  padding: 1rem;
+  background-color: #353b48;
+  color: #fff;
+}
+
+.shop-title h3{
+  margin: 0;
 }
 
 .product-wrapper ul {
@@ -32,6 +44,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #fff;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-orient: vertical;
@@ -41,8 +54,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 1rem;
-  -webkit-box-shadow: -2px 0px 5px 0px #666666;
-  box-shadow: -2px 0px 5px 0px #666666;
   margin: 1rem;
 }
 
@@ -55,4 +66,40 @@
 .product-info {
   padding: 1rem;
 }
-/*# sourceMappingURL=shop.css.map */
+
+
+/*-------------------------------------------------------------------------------------*/
+/* Mobiles landscape */
+@media (min-width: 576px) {
+  .product-img img {
+    width: 17rem;
+    height: 12rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Medium Screens */
+@media (min-width: 768px) {
+  .product-img img {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Tablets landscape (up to 1024px) */
+@media only screen and (min-width: 1024px) and (orientation:landscape) {
+  .product-img img {
+    width: 17rem;
+    height: 12rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* Desktop, big screens */
+@media (min-width: 992px) {
+  .product-img img {
+    width: 17rem;
+    height: 12rem;
+  }
+}

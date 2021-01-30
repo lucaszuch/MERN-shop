@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import path from 'path';
 import dotenv from 'dotenv';
 
 //Accessing packages
@@ -10,6 +11,10 @@ dotenv.config();
 
 //Accessing email
 import sendEmail from './mailer';
+
+//Static files for images
+app.use(express.static('public'));
+app.use('/img', express.static(path.join(__dirname, 'public')));
 
 //Requesting database
 import data from './data';

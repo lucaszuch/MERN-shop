@@ -13,6 +13,7 @@ import CartScreen from '../Screens/CartScreen';
 import ShippingScreen from '../Screens/ShippingScreen';
 import PaymentScreen from '../Screens/PaymentScreen';
 import PlaceOrderScreen from '../Screens/PlaceOrderScreen';
+import SuccessScreen from '../Screens/SuccessScreen';
 import SigninScreen from '../Screens/SigninScreen';
 import RegisterScreen from '../Screens/RegisterScreen';
 import AboutScreen from '../Screens/AboutScreen';
@@ -32,6 +33,7 @@ function App() {
           <Route path='/shipping' component={ShippingScreen} />
           <Route path='/payment' component={PaymentScreen} />
           <Route path='/placeorder' component={PlaceOrderScreen} />
+          <Route path='/success' component={SuccessScreen} />
           <Route path='/signin' component={SigninScreen} />
           <Route path='/register' component={RegisterScreen}/>
           <Route path='/about' component={AboutScreen}/>
